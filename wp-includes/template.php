@@ -256,7 +256,7 @@ function get_date_template() {
  * Retrieve path of home template in current or parent template.
  *
  * This is the template used for the page containing the blog posts.
- * Attempts to locate 'home.php' first before falling back to 'index.php'.
+ * Attempts to locate 'front-page.php' first before falling back to 'index.php'.
  *
  * The template path is filterable via the 'home_template' hook.
  *
@@ -267,7 +267,7 @@ function get_date_template() {
  * @return string Full path to home template file.
  */
 function get_home_template() {
-	$templates = array( 'home.php', 'index.php' );
+	$templates = array( 'front-page.php', 'index.php' );
 
 	return get_query_template( 'home', $templates );
 }

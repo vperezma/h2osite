@@ -93,7 +93,7 @@ function show_boxes(){
 	
 	
 	//CONTACT PAGE METABOXES
-	if ( $('select#page_template :selected').val() == 'page-about.php' ) {
+	if ( $('select#page_template :selected').val() == 'about-us.php' ) {
 		$('#about_metabox').show();
 	}
 	else {
@@ -102,7 +102,7 @@ function show_boxes(){
 	
 	
 	//HOME PAGE METABOXES
-	if ( $('select#page_template :selected').val() == 'page-home.php' ) {
+	if ( $('select#page_template :selected').val() == 'page-front-page.php' ) {
 		$('#home_metabox').show();
 	}
 	else {
