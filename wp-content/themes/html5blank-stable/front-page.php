@@ -1,21 +1,19 @@
 <?php
-
+/*
+Template Name: custom Theme
+*/
     get_header();
 
-    query_posts(array(
-        'post_type' => 'page',
-        'posts_per_page' => 10,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
-    ));
 ?>
 <main role="main">
-    <!-- section -->
+    
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-        <h2><?php echo "the post name is:" . $post->post_name; ?></h2>
-        <?php get_template_part($post->post_name); ?>
+    <section id="<?php echo $post->post_title; ?>">
+       <!--  <h2><?php echo $post->post_title; ?></h2> -->
+        <?php get_template_part($post->post_title); ?>
+        </section>
     <?php endwhile; endif; ?>
-    <!-- /section -->
+    
 </main>
 
 <?php get_footer(); ?>
