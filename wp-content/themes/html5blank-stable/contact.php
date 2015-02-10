@@ -5,7 +5,7 @@
 			<div class="col-md-6">
 				<?php the_content(); ?>
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-10 col-md-6 ">
 				<form class="form-horizontal" role="form" method="post" action="index.php">
 			    <div class="form-group">
 			        <label for="name" class="col-sm-2 control-label">Name</label>

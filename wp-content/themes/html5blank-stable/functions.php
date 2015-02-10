@@ -96,6 +96,11 @@ function html5blank_header_scripts()
     wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js', array('jquery'), true); // all the bootstrap javascript goodness
     }
 }
+function scripts_javascript()
+{
+    wp_register_script('transition-js', get_template_directory_uri() . '/transitions.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('transitions-js'); // all javascript/jquery calls
+}
 
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
@@ -105,7 +110,13 @@ function html5blank_conditional_scripts()
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
 }
+    //* Load Font Awesome
+    add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+    function enqueue_font_awesome() {
 
+        wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+
+    }
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
@@ -346,7 +357,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
-add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
+add_action('wp_enqueue_scripts', 'scripts_javascript');
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 function enqueue_my_styles() {
 wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' );
