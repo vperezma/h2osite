@@ -94,12 +94,13 @@ function html5blank_header_scripts()
 
     wp_enqueue_script( 'jquery', '//https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array('jquery'), '1.9.1', true); // we need the jquery library for bootsrap js to function
     wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js', array('jquery'), true); // all the bootstrap javascript goodness
+        wp_register_script('transitions-js', get_template_directory_uri() . '/js/transitions.js', array('jquery'), '1.9.1', true); // Conditional script(s)
+        wp_enqueue_script('transitions-js'); // all javascript/jquery calls
     }
 }
 function scripts_javascript()
 {
-    wp_register_script('transition-js', get_template_directory_uri() . '/transitions.js', array('jquery'), '1.0.0'); // Conditional script(s)
-    wp_enqueue_script('transitions-js'); // all javascript/jquery calls
+
 }
 
 // Load HTML5 Blank conditional scripts
