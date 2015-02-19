@@ -1,6 +1,7 @@
 			<!-- footer -->
+			<hr>
 			<footer class="footer" role="contentinfo">
-					&copy 2015 
+					<p>&copy 2015 H20 Optimizer</p>
 			</footer>
 			<!-- /footer -->
 

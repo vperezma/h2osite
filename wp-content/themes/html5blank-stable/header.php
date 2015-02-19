@@ -34,10 +34,6 @@
 				<div class="row">
 					<div class="col-md-12">
 							<div class="logo col-md-7">
-								<a href="<?php echo home_url(); ?>">
-									<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-									<img src="<?php echo get_template_directory_uri(); ?>/img/logo-lg.png" alt="Logo" class="logo-img">
-								</a>
 							</div>
 							<div class="btn-group-lg">
 							<div class="farmitrx" >
@@ -62,11 +58,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+		<a href="<?php echo home_url(); ?>">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/logocut.png" alt="Logo" class="logo-img">
+			</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav nav-justified navbar-nav">
+      <ul class="nav nav-right navbar-nav">
         <?php	 query_posts(array(
         'post_type' => 'page',
         'posts_per_page' => 10,

@@ -1,5 +1,5 @@
 <div class="process">
-			<h3><?php the_title(); ?></h3>
+			<h1><?php the_title(); ?></h1>
 		<?php
 		//get the event custom post types
 		$type = 'processing';
@@ -16,25 +16,21 @@
 		if ($my_query->have_posts()): while($my_query->have_posts()): $my_query->the_post();
 			?>
 
-					<div class="col-md-3" id="data" >
+					<div class="col-md-3 process-item"  >
+						<?php the_post_thumbnail('small'); ?>
 
-					<?php the_post_thumbnail('small', array('style' => 'clear:both; float: left; margin-right: 20px;')); ?>
-					<div class="content">
-					<?php the_content(); ?>
-					</div>
-					<div id="image"><?php echo types_render_field('image', array('output' => 'html')); ?></div>
-
-					<div id="content"><?php echo types_render_field('step-desc', array('output' => 'html')); ?></div>
-
-
+						<div class="content">
+							<?php the_content(); ?>
+						</div>
 					</div>
 
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 			<div class="row clear-all">
 				<div class="col-sm-6 col-md-12" >
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default"><a href="#contact">contact us</a></button>
+						<button type="button" class="btn btn-lg"><a href="#contact">contact us</a></button>
 					</div>
 				</div>
 			</div>
+	<hr>
 </div>

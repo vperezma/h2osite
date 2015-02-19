@@ -1,25 +1,15 @@
-//========== Accordion controls===========//
+(function ($) {
 
-jQuery(document).ready(function($) {
-    var $window = $(window);
-    var $data = $('#data');
+    'use strict';
 
-    function checkWidth() {
-        var windowsize = $window.width();
-        if (windowsize <= 480) {
-            //if the window is less than 480px wide then allow accordion
-            $data.find('h3').off('click').click(function () {
-                $(this).parent('#data').find('.content').toggleClass('active');
-            });
+    $(function () {
+        var $processItems = $('.process-item'),
+            $images = $processItems.find('img');
 
-        } else {
-            $data.find('h3').off('click');
-            $data.find('.content').show();
-        }
+        $images.on('click', function () {
+            var $content = $(this).parent().find('.content');
+            $content.toggle();
+        });
+    });
 
-    }
-    // Execute on load
-    checkWidth();
-    // Bind event listener
-    $(window).resize(checkWidth);
-});
+}(jQuery));

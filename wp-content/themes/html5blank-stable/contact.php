@@ -1,11 +1,11 @@
 <div class="contact">
 	<div class="row">
 		<div class="col-md-12">
-			<h2><?php the_title(); ?></h2>
-			<div class="col-md-6">
+			<h1><?php the_title(); ?></h1>
+			<div class="col-md-offset-2 col-md-4">
 				<?php the_content(); ?>
 			</div>
-			<div class="col-sm-10 col-md-6 ">
+			<div class="col-sm-10 col-md-4 ">
 				<form class="form-horizontal" role="form" method="post" action="index.php">
 			    <div class="form-group">
 			        <label for="name" class="col-sm-2 control-label">Name</label>
