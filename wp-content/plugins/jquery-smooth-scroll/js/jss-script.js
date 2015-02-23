@@ -12,7 +12,7 @@ jQuery(function($) {
 	var scrollElem = $('a#scroll-to-top');
 	
 	// Scroll Speed. Change the number to change the speed
-	var scrollSpeed = 200;
+	var scrollSpeed = 250;
 	
 	// Choose your easing effect http://jqueryui.com/resources/demos/effect/easing.html
 	var scrollStyle = 'swing';
@@ -28,9 +28,9 @@ jQuery(function($) {
 	$(window).scroll(function () { 			
 		var scrollTop = $(document).scrollTop();		
 		if ( scrollTop > upperLimit ) {
-			$(scrollElem).stop().fadeTo(300, 1); // fade back in			
+			$(scrollElem).stop().fadeTo(250, 1); // fade back in
 		}else{		
-			$(scrollElem).stop().fadeTo(300, 0); // fade out
+			$(scrollElem).stop().fadeTo(250, 0); // fade out
 		}
 	});
 
@@ -52,7 +52,7 @@ jQuery(function($) {
     {
       
       var target = $(this.hash),
-      headerHeight = $(".primary-header").height() + 5; // Get fixed header height
+      headerHeight = $(".header").height() + 5; // Get fixed header height
             
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               

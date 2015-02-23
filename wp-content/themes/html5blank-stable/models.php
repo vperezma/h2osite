@@ -1,6 +1,6 @@
 <div id="models">
     <div class="row">
-        <h2><?php the_title(); ?></h2>
+        <h1><?php the_title(); ?></h1>
         <?php
         $args = array(
             'post_type' => 'models',
@@ -16,7 +16,7 @@
     <div class="row">
         <?php endif; ?>
         <div class="col-sm-8 col-md-4 col-sm-offset-1 col-md-offset-0" id="data">
-            <h3><?php the_title(); ?></h3>
+            <h2><?php the_title(); ?></h2>
             <div class="content">
                 <?php the_content(); ?>
             </div>
@@ -27,7 +27,7 @@
     <div class="row clear-all">
         <div class="col-sm-6 col-md-12" >
             <div class="btn-group pull-right">
-                <button type="button" class="btn btn-lg"><a href="#contact">contact us</a></button>
+                <button type="button" class="btn btn-lg"><a href="#contact">Contact Us</a></button>
             </div>
         </div>
     </div>

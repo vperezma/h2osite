@@ -20,6 +20,7 @@ body {
     }
     .row{
       margin:0px;
+      padding:0 30px;
   }
   .wrapper{
     background-color: #FFFFFF;
@@ -28,24 +29,104 @@ body {
   .header{
     position:fixed;
     z-index:1;
-    background-color: #376A8A;
+    background-color: #323971;
     width:100%;
   }
 
   .farmitrx-top{
-    margin-top:135px;
+    margin-top:25px;
   }
-  h2, h1, h3{
+  //------------------  this is the styling for the accordion full width---------------------------//
+  /*Define Accordion box*/
+  .accordion {
+    height:600px;
+    width:90%;
+    overflow:hidden;
+    margin:10px auto;
+    margin-top: 120px;
+    color:#474747;
+    background:#d3d3d3;
+    padding:10px;
+    opacity:0.5;
+  }
+  .accordion section{
+    float:left;
+    overflow:hidden;
+    color:#333;
+    cursor:pointer;
+    background: #d3d3d3;
+    margin:3px;
+    height:100%;
+    padding:20px 0;
+    opacity:.5;
+    border: 1px solid #000000;
+  }
+  .accordion section h2 {
+    transform:rotate(90deg);
+  }
+  .accordion section:hover {
+    background:#444;
+  }
+  .accordion section p {
+    display:none;
+  }
+  .accordion section:after{
+    position:relative;
+    font-size:24px;
+    color:#000;
+    font-weight:bold;
+  }
+  .accordion section:nth-child(1):after{ content:'1'; }
+  .accordion section:nth-child(2):after{ content:'2'; }
+  .accordion section:nth-child(3):after{ content:'3'; }
+  .accordion section:nth-child(4):after{ content:'4'; }
+  .accordion section:nth-child(5):after{ content:'5'; }
+
+  .accordion section:target {
+    background:#FFF;
+    padding:10px;
+  }
+  .accordion section:target:hover {
+    background:#FFF;
+  }
+  .accordion section:target h2 {
+    width:100%;
+  }
+  .accordion section:target h2 a{
+    color:#333;
+    padding:0;
+  }
+  .accordion section:target p {
+    display:block;
+  }
+  .accordion section h2 a{
+    padding:8px 10px;
+    display:block;
+    font-size:16px;
+    font-weight:normal;
+    color:#eee;
+    text-decoration:none;
+  }
+  //------------------  this ends the styling for the accordion full width---------------------------//
+   h1{
     font-family: YanoneKaffeesatz, monospace;
     text-align: center;
     text-transform: uppercase;
+    font-size: 40px;
 
+  }
+  h2, h3 {
+    font-family: YanoneKaffeesatz, monospace;
+    text-align: center;
+    text-transform: uppercase;
   }
   .btn{
     background-color: #FFE159;
+    padding:10px 65px;
   }
   .btn a{
-    color:none;
+    color:#376A8A;
+    font-size: 20px;
   }
 
   p{
@@ -59,29 +140,37 @@ body {
       text-transform: uppercase;
 
     }
-    background-color: #376A8A;
+    background-color: #323971;
     border:none;
-    border-bottom:1px solid #FFE159;
 
   }
   .navbar-default .navbar-nav>li>a{
     color:#ffffff;
+    margin-top:22px;
+    padding:0 25px;
+    font-size: 18px;
+
   }
   .navbar-default .navbar-nav>li>a:hover{
-    color:#efefef;
+    color:#00BFFF;
   }
-
+  .navbar-default .navbar-nav>li>a:active{
+    color:#00BFFF;
+  }
   .container{
     max-width:1500px;
   }
   #process{
     .process{
       img {
-        width: 80%;
+        width: 60%;
         clear:both;
         border-radius: 50%;
       }
 
+    }
+    .process-items{
+      clear:both;
     }
   }
   hr{
@@ -110,12 +199,52 @@ body {
       margin-bottom: 10px;
 
     }
+    #process .process-item{
+      clear:both;
+      width:75%;
+      align-items: center;
+    }
+    .vertical {
+      margin-top:150px;
+    }
+    .vertical section{
+      width:100%;
+      height:40px;
+      -webkit-transition:height 0.2s ease-out;
+      -moz-transition:height 0.2s ease-out;
+      -o-transition:height 0.2s ease-out;
+      transition:height 0.2s ease-out;
+    }
+
+    /*Set height of the slide*/
+    .vertical :target{
+      height:250px;
+      width:97%;
+    }
+    .vertical section h2 {
+      position:relative;
+      left:0;
+      top:-15px;
+      transform:rotate(0deg);
+    }
+    /*Set position of the number on the slide*/
+    .vertical section:after{
+      top:-60px;
+      left:810px;
+    }
+    .vertical section:target:after{
+      left:-9999px;
+    }
   }
   @media(min-width:768px) {
     .btn-default.pull-right {
       margin-right: 55px;
       margin-bottom: 10px;
     }
+    .navbar-default .navbar-nav>li>a{
+      font-size:13px;
+    }
+
   }
   @media(min-width:992px){
     .btn-default.pull-right{
@@ -126,6 +255,7 @@ body {
 
 
   @media(min-width:1200px) {
+
     .btn-default.pull-right {
       margin-right:96px;
     }
@@ -136,35 +266,42 @@ body {
   }
 }
 #farmitrx {
-  background-color: #376A8A;
+  background-color:#323971;
   color:#fff;
   width:100%;
 }
 #process {
-  background-color: #376A8A;
+  background-color: #323971;
   color:#fff;
   margin-top: 0;
   padding-top: 40px;
+
   h2{
     color:#FFE159;
+    text-align:left;
+  }
+  p{
+    padding-left:0px;
   }
 }
 #consulting {
   h1{
     color:#376A8A;
+
   }
 }
 #about {
+
   h1{
     color:#376A8A;
   }
 }
 #models {
-  background-color: #376A8A;
+  background-color: #323971;
   color:#fff;
 }
 #contact {
-  background-color: #376A8A;
+  background-color: #323971;
   color:#fff;
 }
 .footer{
