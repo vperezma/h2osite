@@ -106,7 +106,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'wp-logo',
 		'title' => '<span class="ab-icon"></span>',
-		'href'  => self_admin_url( 'about.php' ),
+		'href'  => self_admin_url( 'about-us.php' ),
 		'meta'  => array(
 			'title' => __('About WordPress'),
 		),
@@ -118,7 +118,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 			'parent' => 'wp-logo',
 			'id'     => 'about',
 			'title'  => __('About WordPress'),
-			'href'  => self_admin_url( 'about.php' ),
+			'href'  => self_admin_url( 'about-us.php' ),
 		) );
 	}
 

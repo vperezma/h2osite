@@ -1,4 +1,5 @@
 			<!-- footer -->
+<<<<<<< HEAD
 			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
@@ -8,6 +9,11 @@
 				</p>
 				<!-- /copyright -->
 
+=======
+			<hr>
+			<footer class="footer" role="contentinfo">
+					<p>&copy 2015 H20 Optimizer</p>
+>>>>>>> development
 			</footer>
 			<!-- /footer -->
 
@@ -15,6 +21,7 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
+<<<<<<< HEAD
 
 		<!-- analytics -->
 		<script>
@@ -26,5 +33,7 @@
 		ga('send', 'pageview');
 		</script>
 
+=======
+>>>>>>> development
 	</body>
 </html>
